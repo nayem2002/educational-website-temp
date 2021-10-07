@@ -1,0 +1,598 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.header {
+  width: 100%;
+  height: 100vh;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url(image/banner.png);
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  overflow: hidden;
+}
+
+nav {
+  width: 100%;
+  height: auto;
+  padding: 2% 5%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav img {
+  width: 200px;
+}
+
+.menu {
+  flex: 1;
+  text-align: right;
+}
+
+.menu ul li {
+  list-style: none;
+  display: inline-block;
+  padding: 8px 13px;
+}
+
+.menu ul li a {
+  text-decoration: none;
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 15px;
+}
+
+.menu ul li::after {
+  content: '';
+  width: 0;
+  height: 2px;
+  display: block;
+  background: salmon;
+  margin: auto;
+  transition: all 0.7s;
+}
+
+.menu ul li:hover::after {
+  width: 100%;
+}
+
+.content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: #fff;
+}
+
+.content h1 {
+  font-size: 55px;
+  padding: 10px 10px;
+}
+
+.content p {
+  padding: 20px auto;
+}
+
+.content input {
+  margin-top: 1.3rem;
+  border: 1px solid #ffff;
+  padding: 10px 20px;
+  font-size: 15px;
+  font-weight: bold;
+  background: transparent;
+  color: #fff;
+  cursor: pointer;
+  transition: all 0.7s;
+}
+
+.content input:hover {
+  background: salmon;
+  border: none;
+}
+#menu-open {
+  display: none;
+}
+#menu-close {
+  display: none;
+}
+
+/*----Course Section----*/
+
+.course {
+  width: 80%;
+  padding-top: 100px;
+  text-align: center;
+  margin: auto;
+}
+
+.course h1 {
+  font-size: 35px;
+  font-weight: bold;
+}
+
+.course p {
+  padding-top: 15px;
+  color: #b6b3b6;
+}
+
+.mein-box {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.child-box {
+  margin-top: 50px;
+  flex-basis: 31%;
+  /* max-height: 415px; */
+  background-color: #fff3f3;
+  padding: 25px 20px;
+  border-radius: 10px;
+  margin-bottom: 50px;
+  transition: all 0.7s;
+}
+
+.child-box:hover {
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.3);
+}
+
+/*----Campus Section-----*/
+
+.campus {
+  width: 80%;
+  margin: auto;
+  padding-top: 60px;
+  text-align: center;
+}
+
+.campus h1 {
+  font-size: 35px;
+  font-weight: bold;
+}
+
+.campus p {
+  font-size: 15px;
+  color: rgb(196, 188, 188);
+  padding-top: 15px;
+}
+
+.mein-campus {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  overflow: hidden;
+}
+
+.child-campus {
+  flex-basis: 32%;
+  margin: 50px 10px;
+  position: relative;
+}
+
+.child-campus img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.leayer {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  border-radius: 10px;
+  transition: all 0.8s;
+}
+
+.leayer:hover {
+  background: rgba(224, 0, 0, 0.8);
+}
+
+.leayer h3 {
+  color: #fff;
+  font-size: 30px;
+  font-weight: 500;
+  position: absolute;
+  bottom: 0%;
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 0;
+  transition: all 0.8s;
+}
+
+.leayer:hover h3 {
+  opacity: 1;
+  bottom: 45%;
+}
+
+/*----Facilities Section----*/
+
+.facilities {
+  width: 80%;
+  text-align: center;
+  margin: auto;
+  padding-top: 70px;
+}
+
+.facilities h1 {
+  font-size: 35px;
+  font-weight: bold;
+}
+
+.facilities p {
+  padding-top: 15px;
+  color: #b6b3b6;
+}
+
+.mein-facilities {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.child-facilities {
+  flex-basis: 32%;
+  margin: 50px 10px;
+}
+
+.child-facilities img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.facilities-content {
+  padding-top: 20px;
+}
+
+/*----Reviow Section-----*/
+
+.reviow {
+  width: 80%;
+  text-align: center;
+  margin: auto;
+  padding-top: 50px;
+}
+
+.reviow h1 {
+  font-size: 35px;
+  font-weight: bold;
+}
+
+.reviow p {
+  padding-top: 15px;
+  color: #b6b3b6;
+}
+
+.mein-reviow-box {
+  display: flex;
+  justify-content: space-between;
+}
+
+.mein-reviow-box img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  float: left;
+  margin: 20px 20px;
+}
+
+.user-reviow {
+  background: #fff3f3;
+  margin: 50px 20px;
+  border-radius: 10px;
+}
+
+.user-reviow p {
+  text-align: justify;
+  padding: 15px 20px;
+  line-height: 25px;
+  font-size: 15px;
+}
+
+.user-reviow h3 {
+  text-align: left;
+  margin-left: 80px;
+  font-size: 17px;
+  font-weight: 400px;
+}
+
+.icon {
+  text-align: left;
+  margin-left: 80px;
+  color: tomato;
+  padding: 15px 0px;
+}
+
+/*----Course enroll----*/
+
+.course-enroll {
+  width: 100%;
+  min-height: 400px;
+  margin: 100px auto;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+    url(image/banner2.jpg);
+  background-position: center;
+  background-size: cover;
+  border-radius: 10px;
+  position: relative;
+}
+
+.course-enroll h2,
+button {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.course-enroll h2 {
+  color: #fff;
+  font-weight: 359px;
+  font-size: 30px;
+}
+
+.course-enroll button {
+  margin-top: 80px;
+  border: 1px solid #fff;
+  background: transparent;
+  padding: 10px 20px;
+  color: #fff;
+  font-size: 15px;
+  font-weight: 400;
+  cursor: pointer;
+  transition: all 0.7s;
+}
+
+.course-enroll button:hover {
+  background: salmon;
+  border: none;
+}
+
+/*----Foter section----*/
+
+.foter {
+  width: 80%;
+  text-align: center;
+  margin: auto;
+}
+
+.foter h3 {
+  font-size: 25px;
+  font-weight: bold;
+  padding-top: 50px;
+}
+
+.foter p {
+  padding-top: 20px;
+  color: #b6b3b6;
+  font-size: 15px;
+}
+
+.social-icon {
+  margin-top: 30px;
+}
+
+.social-icon i {
+  padding: 0 15px;
+  font-size: 22px;
+  color: tomato;
+  transition: all 0.5s;
+}
+
+.social-icon i:hover {
+  color: sandybrown;
+}
+
+.cractor {
+  margin: 0;
+  padding-bottom: 25px;
+}
+
+.cractor i {
+  color: tomato;
+  word-spacing: 8px;
+}
+
+/*-------CLOSED------*/
+
+/* Media Quiray */
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (min-width: 1200px) {
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (max-width: 1092px) {
+  .content h1 {
+    font-size: 40px;
+    padding: 10px 10px;
+  }
+
+  .mein-box .child-box p {
+    font-size: 15px;
+  }
+  .mein-box .child-box h2 {
+    font-size: 20px;
+  }
+  .course-enroll h2 {
+    font-size: 26px;
+  }
+  .course-enroll button {
+    margin-top: 100px;
+  }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (max-width: 825px) {
+  #menu-open {
+    display: block;
+    color: #fff;
+    font-size: 25px;
+    cursor: pointer;
+  }
+  #menu-open:hover {
+    color: #f39c12;
+  }
+  #menu-close {
+    display: inline-block;
+    color: #fff;
+    font-size: 1.5rem;
+    padding-top: 15px;
+    cursor: pointer;
+  }
+
+  #menu-close:hover {
+    color: red;
+  }
+  #toggle {
+    position: absolute;
+    width: 35%;
+    height: 100vh;
+    top: 0;
+    right: -300px;
+    text-align: left;
+    background: rgb(85, 55, 146);
+    z-index: 2;
+    padding-left: 20px;
+    transition: all 1s;
+  }
+  #toggle ul {
+    margin-top: 30px;
+  }
+  #toggle ul li {
+    display: block;
+  }
+
+  .content h1 {
+    font-size: 35px;
+    /* padding: 10px 10px; */
+  }
+  .content p {
+    font-size: 15px;
+  }
+  .content input {
+    margin-top: 1rem;
+    padding: 10px 15px;
+    font-size: 12px;
+  }
+  .course-enroll h2 {
+    font-size: 25px;
+  }
+  .course-enroll button {
+    /* margin-top: 100px; */
+    padding: 10px 15px;
+  }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (max-width: 600px) {
+  nav img {
+    width: 150px;
+  }
+  .content h1 {
+    font-size: 26px;
+  }
+  .content p {
+    font-size: 13px;
+  }
+  .content input {
+    padding: 10px 10px;
+    font-size: 10px;
+  }
+  .course h1,
+  .campus h1,
+  .facilities h1,
+  .reviow h1 {
+    font-size: 30px;
+  }
+  .course p,
+  .campus p,
+  .facilities p,
+  .reviow p,
+  .foter p {
+    font-size: 15px;
+  }
+  .mein-box,
+  .mein-campus,
+  .mein-facilities,
+  .mein-reviow-box {
+    display: block;
+  }
+  .course-enroll h2 {
+    font-size: 22px;
+  }
+  .course-enroll button {
+    margin-top: 110px;
+    padding: 8px 10px;
+  }
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (max-width: 480px) {
+  nav img {
+    width: 100px;
+    padding-top: 10px;
+  }
+  .content h1 {
+    font-size: 20px;
+    padding-top: 30px;
+  }
+  .content p {
+    font-size: 10px;
+  }
+  .content input {
+    padding: 7px 8px;
+    font-size: 8px;
+  }
+  .course h1,
+  .campus h1,
+  .facilities h1,
+  .reviow h1 {
+    font-size: 25px;
+  }
+  .user-reviow h3 {
+    text-align: center;
+    margin-left: 0px;
+    font-size: 15px;
+  }
+  .user-reviow p {
+    padding: 10px 15px;
+    font-size: 13px;
+    line-height: 20px;
+  }
+  .icon {
+    text-align: center;
+    margin-left: 0px;
+  }
+  .mein-reviow-box img {
+    float: none;
+    margin: 10px 20px;
+  }
+  .course-enroll h2 {
+    font-size: 20px;
+  }
+  .course-enroll button {
+    margin-top: 125px;
+    padding: 7px 8px;
+    font-size: 10px;
+  }
+  .social-icon i {
+    padding: 0px 10px;
+    font-size: 20px;
+  }
+  .foter p {
+    font-size: 12px;
+  }
+  #menu-open {
+    font-size: 20px;
+  }
+  #toggle {
+    width: 70%;
+  }
+}
